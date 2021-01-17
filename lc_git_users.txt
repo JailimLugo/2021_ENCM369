@@ -1,2 +1,3 @@
 firstname,lastname,email,git_username,repository_name
 jailim,lugo,jailim.lugo@ucalgary.ca,JailimLugo,2021_ENCM369
+Steven,Ng,steven.ng@ucalgary.ca,SYS-NG,2021_ENCM369
