@@ -27318,7 +27318,7 @@ void UserAppRun(void)
 
     static u8 u8counter=0x80;
 
-    u32 u32Delaycounter=160000;
+    u32 u32Delaycounter=(u32)64000000/4/4;
 
     if(u8counter==0xFF)
     {

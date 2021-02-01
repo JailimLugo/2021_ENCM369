@@ -259,9 +259,9 @@ text3 1FF12 1FF13 CODE 1FF12 0
 text6 1FF10 1FF11 CODE 1FF10 0
 idataCOMRAM 1FF0F 1FF0F CODE 1FF0F 0
 %locals
-dist/default/production\2021_ENCM369.production.o
+dist/default/debug\2021_ENCM369.debug.o
 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-C:\Users\jaili\AppData\Local\Temp\sfus.s
+C:\Users\jaili\AppData\Local\Temp\s4kg.s
 5090 1FF6A 0 CODE 0
 5092 1FF6A 0 CODE 0
 5095 1FF6A 0 CODE 0

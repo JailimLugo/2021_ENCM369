@@ -94,6 +94,30 @@ Promises:
 */
 void UserAppRun(void)
 {
+    
+    static u8 u8counter=0x80; //initiating a static counter variable that will update the pins
+    
+    u32 u32Delaycounter=160000; 
+    
+    if(u8counter==0xFF)
+    {
+        u8counter=0x80;
+    }
+    
+    u8counter++;
+    
+    LATA=u8counter;
+    
+    for(u32 i=0;i<u32Delaycounter;i++)
+    {
+    }
+    
+ 
+    
+ 
+
+    
+    
 
 
 } /* end UserAppRun */

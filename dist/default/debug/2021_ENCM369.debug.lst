@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Sun Jan 31 21:51:04 2021
+                                                                                               Sun Jan 31 21:44:02 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F27Q43
@@ -278,12 +278,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    244                           	callstack 127
    245  01FF90                     
    246                           ;user_app.c: 98:     static u8 u8counter=0x80;;user_app.c: 100:     u32 u32Delaycounter=
-      +                          160000;
+      +                          (u32)64000000/4/4;
    247  01FF90  0E00               	movlw	0
    248  01FF92  6E0E               	movwf	UserAppRun@u32Delaycounter^(0+1280),c
-   249  01FF94  0E71               	movlw	113
+   249  01FF94  0E09               	movlw	9
    250  01FF96  6E0F               	movwf	(UserAppRun@u32Delaycounter+1)^(0+1280),c
-   251  01FF98  0E02               	movlw	2
+   251  01FF98  0E3D               	movlw	61
    252  01FF9A  6E10               	movwf	(UserAppRun@u32Delaycounter+2)^(0+1280),c
    253  01FF9C  0E00               	movlw	0
    254  01FF9E  6E11               	movwf	(UserAppRun@u32Delaycounter+3)^(0+1280),c
@@ -1168,7 +1168,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Sun Jan 31 21:51:04 2021
+Symbol Table                                                                                   Sun Jan 31 21:44:02 2021
 
      __size_of_SysTickSetup 0022                          l13 FF10                          l22 FF12  
                         l16 FF24                          l19 FF46                          l61 FFDC  
