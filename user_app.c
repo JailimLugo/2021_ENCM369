@@ -94,7 +94,25 @@ Promises:
 */
 void UserAppRun(void)
 {
+    
+    static u8 u8counter=0x80; //initiating a starting position, a static counter variable to all zeros except RA7
 
+    if(u8counter==0xFF)  //Checking if value of counter is all ones 
+    {
+        u8counter=0x80; // If it is all ones,going back to starting position
+    }
+    
+    LATA=u8counter; //Output counter value to the pins
+    
+    u8counter++; //Increment counter by one
+    
+    u32 u32Delaycounter=160000; //Initializing a counter for the delay of ~ 250ms
+    
+    while(u32Delaycounter>0) // A loop that will implement the delay
+    { 
+        u32Delaycounter--;
+    }
+    
 
 } /* end UserAppRun */
 
