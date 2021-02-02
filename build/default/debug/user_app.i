@@ -27318,19 +27318,21 @@ void UserAppRun(void)
 
     static u8 u8counter=0x80;
 
-    u32 u32Delaycounter=(u32)64000000/4/4;
-
     if(u8counter==0xFF)
     {
         u8counter=0x80;
     }
 
-    u8counter++;
-
     LATA=u8counter;
 
-    for(u32 i=0;i<u32Delaycounter;i++)
+    u8counter++;
+
+    u32 u32Delaycounter=16000;
+
+    while(u32Delaycounter>0)
     {
+        u32Delaycounter--;
     }
-# 123 "user_app.c"
+
+
 }
