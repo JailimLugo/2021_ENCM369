@@ -1,13 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"60 ./encm369_pic18.h
-[; ;./encm369_pic18.h: 60: void ClockSetup(void);
+"61 ./encm369_pic18.h
+[; ;./encm369_pic18.h: 61: void ClockSetup(void);
 [v _ClockSetup `(v ~T0 @X0 0 ef ]
-"63
-[; ;./encm369_pic18.h: 63: void SysTickSetup(void);
+"64
+[; ;./encm369_pic18.h: 64: void SysTickSetup(void);
 [v _SysTickSetup `(v ~T0 @X0 0 ef ]
-"61
-[; ;./encm369_pic18.h: 61: void GpioSetup(void);
+"62
+[; ;./encm369_pic18.h: 62: void GpioSetup(void);
 [v _GpioSetup `(v ~T0 @X0 0 ef ]
 "27 ./user_app.h
 [; ;./user_app.h: 27: void UserAppInitialize(void);
@@ -15,8 +15,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [; ;./user_app.h: 28: void UserAppRun(void);
 [v _UserAppRun `(v ~T0 @X0 0 ef ]
-"64 ./encm369_pic18.h
-[; ;./encm369_pic18.h: 64: void SystemSleep(void);
+"65 ./encm369_pic18.h
+[; ;./encm369_pic18.h: 65: void SystemSleep(void);
 [v _SystemSleep `(v ~T0 @X0 0 ef ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]

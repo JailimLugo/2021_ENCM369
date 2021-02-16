@@ -95,25 +95,27 @@ Promises:
 void UserAppRun(void)
 {
     
-    static u8 u8Counter=0x80; //initiating a starting position, a static counter variable to all zeros except RA7
+    static u32 u32Counter = 0x00000080; 
 
-    if(u8Counter==0xFF)  //Checking if value of counter is all ones 
+    if ( (PORTBbits.RB5) ^ (0) == 1)
     {
-        u8Counter=0x80; // If it is all ones,going back to starting position
+        if (u32Counter == 0x000000FF)
+        {
+            u32Counter == 0x00000080;
+        }
+        
+    u32Counter ++;
+    
+    LATA = u32Counter;
+    
+    while(1)
+    {
+        if ( (PORTBbits.RB5) ^ (0) == 0)
+            break;
     }
     
-    LATA=u8Counter; //Output counter value to the pins
-    
-    u8Counter++; //Increment counter by one
-    
-    u32 u32DelayCounter=160000; //Initializing a counter for the delay of ~ 250ms
-    
-    while(u32DelayCounter>0) // A loop that will implement the delay
-    { 
-        u32DelayCounter--;
     }
     
-
 } /* end UserAppRun */
 
 
