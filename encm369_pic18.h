@@ -8,7 +8,8 @@
 
 /*! @cond DOXYGEN_EXCLUDE */
 /***********************************************************************************************************************
-Perihperal Setup Initializations
+
+ * Perihperal Setup Initializations
 
 Bookmarks:
 &&&&& Function Declarations
