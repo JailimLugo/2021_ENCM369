@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Mon Feb 15 22:04:47 2021
+                                                                                               Wed Feb 24 16:19:23 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F27Q43
@@ -79,9 +79,9 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
     65  0000                     _ANSELB	set	1032
     66  0000                     _ANSELA	set	1024
     67  0000                     _PORTBbits	set	1231
-    68  0000                     _TRISB	set	1223
-    69  0000                     _TRISA	set	1222
-    70  0000                     _LATA	set	1214
+    68  0000                     _LATA	set	1214
+    69  0000                     _TRISB	set	1223
+    70  0000                     _TRISA	set	1222
     71                           
     72                           ; #config settings
     73                           
@@ -380,7 +380,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    335                           
    336 ;; *************** function _SystemSleep *****************
    337 ;; Defined at:
-   338 ;;		line 135 in file "encm369_pic18.c"
+   338 ;;		line 134 in file "encm369_pic18.c"
    339 ;; Parameters:    Size  Location     Type
    340 ;;		None
    341 ;; Auto vars:     Size  Location     Type
@@ -428,7 +428,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    373                           
    374 ;; *************** function _SysTickSetup *****************
    375 ;; Defined at:
-   376 ;;		line 113 in file "encm369_pic18.c"
+   376 ;;		line 112 in file "encm369_pic18.c"
    377 ;; Parameters:    Size  Location     Type
    378 ;;		None
    379 ;; Auto vars:     Size  Location     Type
@@ -471,7 +471,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    406  01FF34                     _SysTickSetup:
    407                           	callstack 127
    408  01FF34                     
-   409                           ;encm369_pic18.c: 115:   G_u32SystemTime1ms = 0;
+   409                           ;encm369_pic18.c: 114:   G_u32SystemTime1ms = 0;
    410  01FF34  0E00               	movlw	0
    411  01FF36  6E09               	movwf	_G_u32SystemTime1ms^(0+1280),c	;volatile
    412  01FF38  0E00               	movlw	0
@@ -481,7 +481,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    416  01FF40  0E00               	movlw	0
    417  01FF42  6E0C               	movwf	(_G_u32SystemTime1ms+3)^(0+1280),c	;volatile
    418                           
-   419                           ;encm369_pic18.c: 116:   G_u32SystemTime1s = 0;
+   419                           ;encm369_pic18.c: 115:   G_u32SystemTime1s = 0;
    420  01FF44  0E00               	movlw	0
    421  01FF46  6E05               	movwf	_G_u32SystemTime1s^(0+1280),c	;volatile
    422  01FF48  0E00               	movlw	0
@@ -539,26 +539,26 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    464  01FF1C                     _GpioSetup:
    465                           	callstack 127
    466  01FF1C                     
-   467                           ;encm369_pic18.c: 92:     LATA=0x80;
-   468  01FF1C  0E80               	movlw	128
-   469  01FF1E  6EBE               	movwf	190,c	;volatile
+   467                           ;encm369_pic18.c: 91:     TRISA=0x00;
+   468  01FF1C  0E00               	movlw	0
+   469  01FF1E  6EC6               	movwf	198,c	;volatile
    470                           
-   471                           ;encm369_pic18.c: 93:     TRISA=0x00;
-   472  01FF20  0E00               	movlw	0
-   473  01FF22  6EC6               	movwf	198,c	;volatile
+   471                           ;encm369_pic18.c: 92:     TRISB=0x30;
+   472  01FF20  0E30               	movlw	48
+   473  01FF22  6EC7               	movwf	199,c	;volatile
    474                           
-   475                           ;encm369_pic18.c: 94:     TRISB=0x20;
-   476  01FF24  0E20               	movlw	32
-   477  01FF26  6EC7               	movwf	199,c	;volatile
-   478                           
-   479                           ;encm369_pic18.c: 95:     ANSELA=0x00;
-   480  01FF28  0E00               	movlw	0
-   481  01FF2A  0104               	movlb	4	; () banked
-   482  01FF2C  6F00               	movwf	0,b	;volatile
+   475                           ;encm369_pic18.c: 93:     ANSELA=0x00;
+   476  01FF24  0E00               	movlw	0
+   477  01FF26  0104               	movlb	4	; () banked
+   478  01FF28  6F00               	movwf	0,b	;volatile
+   479                           
+   480                           ;encm369_pic18.c: 94:     ANSELB=0x00;
+   481  01FF2A  0E00               	movlw	0
+   482  01FF2C  6F08               	movwf	8,b	;volatile
    483                           
-   484                           ;encm369_pic18.c: 96:     ANSELB=0x00;
-   485  01FF2E  0E00               	movlw	0
-   486  01FF30  6F08               	movwf	8,b	;volatile
+   484                           ;encm369_pic18.c: 95:     LATA=0x80;
+   485  01FF2E  0E80               	movlw	128
+   486  01FF30  6EBE               	movwf	190,c	;volatile
    487  01FF32                     
    488                           ; BSR set to: 4
    489  01FF32  0012               	return		;funcret
@@ -1160,7 +1160,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Mon Feb 15 22:04:47 2021
+Symbol Table                                                                                   Wed Feb 24 16:19:23 2021
 
      __size_of_SysTickSetup 0022                          l20 FF32                          l23 FF54  
                         l17 FF12                          l26 FF14                          l61 FF16  
