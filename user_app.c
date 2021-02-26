@@ -97,7 +97,7 @@ void UserAppRun(void)
     
     static u32 u32Counter = 0x00000080; 
 
-    if ( (PORTBbits.RB5) ^ (0) == 1 )
+    if ( (PORTBbits.RB5) ^ (0) == 1)
     {
         if (u32Counter == 0x000000FF)
         {
@@ -110,7 +110,7 @@ void UserAppRun(void)
     
         while(1)
         {
-            if ( (PORTBbits.RB5) ^ (0) == 0 )
+            if ( (PORTBbits.RB5) ^ (0) == 0)
                 break;
         }
      
