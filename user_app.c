@@ -97,23 +97,23 @@ void UserAppRun(void)
     
     static u32 u32Counter = 0x00000080; 
 
-    if ( (PORTBbits.RB5) ^ (0) == 1)
+    if ( (PORTBbits.RB5) ^ (0) == 1 )
     {
         if (u32Counter == 0x000000FF)
         {
-            u32Counter == 0x00000080;
+            u32Counter = 0x00000080;
         }
         
-    u32Counter ++;
+        u32Counter ++;
     
-    LATA = u32Counter;
+        LATA = u32Counter;
     
-    while(1)
-    {
-        if ( (PORTBbits.RB5) ^ (0) == 0)
-            break;
-    }
-    
+        while(1)
+        {
+            if ( (PORTBbits.RB5) ^ (0) == 0 )
+                break;
+        }
+     
     }
     
 } /* end UserAppRun */
