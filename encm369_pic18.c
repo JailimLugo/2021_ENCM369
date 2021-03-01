@@ -151,6 +151,33 @@ void SystemSleep(void)
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* End of File */
 /*--------------------------------------------------------------------------------------------------------------------*/
-
+void TimeXus(INPUT_PARAMETER_)
+{
+    if(INPUT_PARAMETER>65535)
+    {
+        return;
+    }
+    u8RegCounter=INPUT_PARAMETER/2;
+    
+    TMR0L=u8RegCounter;
+    
+    TMR0H=u8RegCounter;
+    
+    PIR3bits.TMR0IF=0;
+    
+    while(TMR0L>0)
+    {
+        TMR0L=TMR0L-1;
+    }
+    while(TMR0H>0)
+    {
+        TMR0H=TMR0H-1;
+    }
+    
+    }
+            
+    
+    
+}
 
 
