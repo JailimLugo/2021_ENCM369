@@ -27309,30 +27309,27 @@ extern volatile u32 G_u32SystemFlags;
 # 76 "user_app.c"
 void UserAppInitialize(void)
 {
+    T0CON0=100010000;
+
+    T0CON1=01011000;
+
+
 
 
 }
-# 95 "user_app.c"
+# 100 "user_app.c"
 void UserAppRun(void)
 {
 
-    static u8 u8counter=0x80;
+    static u8 u8Counter=0x80;
 
-    if(u8counter==0xFF)
+    if(u8Counter==0xFF)
     {
-        u8counter=0x80;
+        u8Counter=u8Counter && 0x80;
     }
 
-    LATA=u8counter;
+    LATA=u8Counter;
 
-    u8counter++;
-
-    u32 u32Delaycounter=160000;
-
-    while(u32Delaycounter>0)
-    {
-        u32Delaycounter--;
-    }
-
+    u8Counter++;
 
 }

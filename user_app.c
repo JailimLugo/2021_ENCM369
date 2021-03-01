@@ -75,6 +75,11 @@ Promises:
 */
 void UserAppInitialize(void)
 {
+    T0CON0=10010000;
+    
+    T0CON1=01011000;
+      /*Timer 0 enabled,16-bit timer,1:1 postscaler,FOsc/4*,1:256 prescaler,asynchronized */
+    
 
 
 } /* end UserAppInitialize() */
@@ -95,24 +100,16 @@ Promises:
 void UserAppRun(void)
 {
     
-    static u8 u8Counter=0x80; //initiating a starting position, a static counter variable to all zeros except RA7
+    static u8 u8Counter=0x80; 
 
-    if(u8Counter==0xFF)  //Checking if value of counter is all ones 
+    if(u8Counter==0xFF)  
     {
-        u8Counter=0x80; // If it is all ones,going back to starting position
+        u8Counter=u8Counter && 0x80; 
     }
     
-    LATA=u8Counter; //Output counter value to the pins
+    LATA=u8Counter; 
     
     u8Counter++; //Increment counter by one
-    
-    u32 u32DelayCounter=160000; //Initializing a counter for the delay of ~ 250ms
-    
-    while(u32DelayCounter>0) // A loop that will implement the delay
-    { 
-        u32DelayCounter--;
-    }
-    
 
 } /* end UserAppRun */
 
