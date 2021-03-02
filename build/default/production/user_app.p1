@@ -2541,8 +2541,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _UserAppInitialize ]
 [f ]
 "78
-[; ;user_app.c: 78:     T0CON0=100010000;
-[e = _T0CON0 -> -> 100010000 `l `uc ]
+[; ;user_app.c: 78:     T0CON0=10010000;
+[e = _T0CON0 -> -> 10010000 `l `uc ]
 "80
 [; ;user_app.c: 80:     T0CON1=01011000;
 [e = _T0CON1 -> -> 266752 `l `uc ]

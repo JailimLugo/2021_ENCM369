@@ -27322,3 +27322,22 @@ void SystemSleep(void)
 {
 
 }
+# 168 "encm369_pic18.c"
+void TimeXus(INPUT_PARAMETER_)
+{
+    if(INPUT_PARAMETER>65535)
+    {
+        return;
+    }
+
+    T0CON0bits.EN=0;
+
+    TMR0L=INPUT_PARAMETER/2;
+
+    TMR0H=INPUT_PARAMETER/2;
+
+    PIR3bits.TMR0IF=0;
+
+    T0CON0bits.EN=1;
+
+}

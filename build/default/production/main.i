@@ -27333,9 +27333,10 @@ void main(void)
 
 
 
-                   ;
+    (LATA &= 0x7F);
     SystemSleep();
-                  ;
+
+    (LATA |= 0X80);
 
   }
 

@@ -27309,7 +27309,7 @@ extern volatile u32 G_u32SystemFlags;
 # 76 "user_app.c"
 void UserAppInitialize(void)
 {
-    T0CON0=100010000;
+    T0CON0=10010000;
 
     T0CON1=01011000;
 
