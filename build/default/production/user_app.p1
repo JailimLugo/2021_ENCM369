@@ -2560,83 +2560,83 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2272 ]
 }
 "116
-[; ;user_app.c: 116: void TimeXus(u16 u16Count)
+[; ;user_app.c: 116: void TimeXus(u16 u16UserInput)
 [v _TimeXus `(v ~T0 @X0 1 ef1`us ]
 "117
 [; ;user_app.c: 117: {
 {
 [e :U _TimeXus ]
 "116
-[; ;user_app.c: 116: void TimeXus(u16 u16Count)
-[v _u16Count `us ~T0 @X0 1 r1 ]
+[; ;user_app.c: 116: void TimeXus(u16 u16UserInput)
+[v _u16UserInput `us ~T0 @X0 1 r1 ]
 "117
 [; ;user_app.c: 117: {
 [f ]
 "118
-[; ;user_app.c: 118:   T0CON0 = T0CON0 & 0x7F;
-[e = _T0CON0 -> & -> _T0CON0 `i -> 127 `i `uc ]
-"119
-[; ;user_app.c: 119:     u16 u16StartPoint = 0xFFFF - u16Count;
-[v _u16StartPoint `us ~T0 @X0 1 a ]
-[e = _u16StartPoint -> - -> 65535 `ui -> _u16Count `ui `us ]
+[; ;user_app.c: 118:   T0CON0 = 0x10;
+[e = _T0CON0 -> -> 16 `i `uc ]
 "120
-[; ;user_app.c: 120:     TMR0H = u16StartPoint >> 8;
-[e = _TMR0H -> >> -> _u16StartPoint `ui -> 8 `i `uc ]
-"121
-[; ;user_app.c: 121:     TMR0L = u16StartPoint & 0x00FF;
-[e = _TMR0L -> & -> _u16StartPoint `ui -> -> 255 `i `ui `uc ]
+[; ;user_app.c: 120:   u16 u16UserCount = 0xFFFF - u16UserInput;
+[v _u16UserCount `us ~T0 @X0 1 a ]
+[e = _u16UserCount -> - -> 65535 `ui -> _u16UserInput `ui `us ]
 "122
-[; ;user_app.c: 122:     PIR3 = PIR3 & 0x7F;
+[; ;user_app.c: 122:   TMR0H = u16UserCount >> 8;
+[e = _TMR0H -> >> -> _u16UserCount `ui -> 8 `i `uc ]
+"124
+[; ;user_app.c: 124:   TMR0L = u16UserCount & 0x00FF;
+[e = _TMR0L -> & -> _u16UserCount `ui -> -> 255 `i `ui `uc ]
+"126
+[; ;user_app.c: 126:   PIR3 = PIR3 & 0x7F;
 [e = _PIR3 -> & -> _PIR3 `i -> 127 `i `uc ]
-"123
-[; ;user_app.c: 123:     T0CON0 = T0CON0 | 0x80;
-[e = _T0CON0 -> | -> _T0CON0 `i -> 128 `i `uc ]
-"125
-[; ;user_app.c: 125: }
+"128
+[; ;user_app.c: 128:   T0CON0 = 0x90;
+[e = _T0CON0 -> -> 144 `i `uc ]
+"130
+[; ;user_app.c: 130: }
 [e :UE 2273 ]
 }
-"128
-[; ;user_app.c: 128: void UserAppRun(void)
+"133
+[; ;user_app.c: 133: void UserAppRun(void)
 [v _UserAppRun `(v ~T0 @X0 1 ef ]
-"129
-[; ;user_app.c: 129: {
+"134
+[; ;user_app.c: 134: {
 {
 [e :U _UserAppRun ]
 [f ]
-"130
-[; ;user_app.c: 130:     u8 u8Counter = LATA;
+"135
+[; ;user_app.c: 135:     u8 u8Counter = LATA;
 [v _u8Counter `uc ~T0 @X0 1 a ]
 [e = _u8Counter _LATA ]
-"132
-[; ;user_app.c: 132:     if(u8Counter == 0x11111111)
-[e $ ! == -> _u8Counter `l -> 286331153 `l 2275  ]
-"133
-[; ;user_app.c: 133:     {
+"137
+[; ;user_app.c: 137:     if(u8Counter == 0xFF)
+[e $ ! == -> _u8Counter `i -> 255 `i 2275  ]
+"138
+[; ;user_app.c: 138:     {
 {
-"134
-[; ;user_app.c: 134:         u8Counter=0x10000000;
-[e = _u8Counter -> -> 268435456 `l `uc ]
-"135
-[; ;user_app.c: 135:     }
+"139
+[; ;user_app.c: 139:         u8Counter=0x80;
+[e = _u8Counter -> -> 128 `i `uc ]
+"140
+[; ;user_app.c: 140:     }
 }
 [e $U 2276  ]
-"136
-[; ;user_app.c: 136:     else
+"141
+[; ;user_app.c: 141:     else
 [e :U 2275 ]
-"137
-[; ;user_app.c: 137:     {
+"142
+[; ;user_app.c: 142:     {
 {
-"138
-[; ;user_app.c: 138:         u8Counter=u8Counter+1;
+"143
+[; ;user_app.c: 143:         u8Counter=u8Counter+1;
 [e = _u8Counter -> + -> _u8Counter `i -> 1 `i `uc ]
-"139
-[; ;user_app.c: 139:     }
+"144
+[; ;user_app.c: 144:     }
 }
 [e :U 2276 ]
-"141
-[; ;user_app.c: 141:     LATA= u8Counter;
+"146
+[; ;user_app.c: 146:     LATA= u8Counter;
 [e = _LATA _u8Counter ]
-"142
-[; ;user_app.c: 142: }
+"147
+[; ;user_app.c: 147: }
 [e :UE 2274 ]
 }

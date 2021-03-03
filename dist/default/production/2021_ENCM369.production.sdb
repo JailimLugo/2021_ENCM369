@@ -41,7 +41,7 @@
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
 "116
 [v _TimeXus TimeXus `(v  1 e 1 0 ]
-"128
+"133
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 "22235 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
 [v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
@@ -72,12 +72,12 @@
 {
 "77
 } 0
-"128 C:\Github\ENCM369\2021_ENCM369\user_app.c
+"133 C:\Github\ENCM369\2021_ENCM369\user_app.c
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
-"130
+"135
 [v UserAppRun@u8Counter u8Counter `uc  1 a 1 0 ]
-"142
+"147
 } 0
 "76
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
@@ -87,11 +87,11 @@
 "116
 [v _TimeXus TimeXus `(v  1 e 1 0 ]
 {
-"119
-[v TimeXus@u16StartPoint u16StartPoint `us  1 a 2 2 ]
+"120
+[v TimeXus@u16UserCount u16UserCount `us  1 a 2 2 ]
 "116
-[v TimeXus@u16Count u16Count `us  1 p 2 0 ]
-"125
+[v TimeXus@u16UserInput u16UserInput `us  1 p 2 0 ]
+"130
 } 0
 "132 C:\Github\ENCM369\2021_ENCM369\encm369_pic18.c
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]

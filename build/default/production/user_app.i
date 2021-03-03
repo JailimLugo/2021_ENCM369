@@ -27321,14 +27321,19 @@ void UserAppInitialize(void)
 
 }
 # 116 "user_app.c"
-void TimeXus(u16 u16Count)
+void TimeXus(u16 u16UserInput)
 {
-  T0CON0 = T0CON0 & 0x7F;
-    u16 u16StartPoint = 0xFFFF - u16Count;
-    TMR0H = u16StartPoint >> 8;
-    TMR0L = u16StartPoint & 0x00FF;
-    PIR3 = PIR3 & 0x7F;
-    T0CON0 = T0CON0 | 0x80;
+  T0CON0 = 0x10;
+
+  u16 u16UserCount = 0xFFFF - u16UserInput;
+
+  TMR0H = u16UserCount >> 8;
+
+  TMR0L = u16UserCount & 0x00FF;
+
+  PIR3 = PIR3 & 0x7F;
+
+  T0CON0 = 0x90;
 
 }
 
@@ -27337,9 +27342,9 @@ void UserAppRun(void)
 {
     u8 u8Counter = LATA;
 
-    if(u8Counter == 0x11111111)
+    if(u8Counter == 0xFF)
     {
-        u8Counter=0x10000000;
+        u8Counter=0x80;
     }
     else
     {
