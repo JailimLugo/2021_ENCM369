@@ -27340,17 +27340,24 @@ void TimeXus(u16 u16UserInput)
 
 void UserAppRun(void)
 {
-    static u8 u8Counter = 0x80;
+      u8 u8Pattern[] = {0x20,0x10,0x08,0x04,0x02,0x01,0x02,0x04,0x08,0x10,0x20};
 
-    if(u8Counter == 0xFF)
-    {
-        u8Counter=0x80;
-    }
-    else
-    {
-        u8Counter=u8Counter+1;
-    }
+      u8 u8PatternLength = 0x0B;
 
-    LATA= u8Counter;
+       u8 u8Initial;
+
+      static u8 u8Counter = 0x00;
+
+      if(u8Counter >= u8PatternLength)
+      {
+          u8Counter = 0x00;
+
+      }
+
+      u8Initial = LATA & 0xC0;
+
+      LATA = ( u8Pattern[u8Counter] ) | u8Initial;
+
+      u8Counter = u8Counter +1;
 
 }

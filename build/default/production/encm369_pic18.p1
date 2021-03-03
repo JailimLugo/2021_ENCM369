@@ -2558,43 +2558,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 "91
 [; ;encm369_pic18.c: 91:     TRISA=0x00;
 [e = _TRISA -> -> 0 `i `uc ]
-"92
-[; ;encm369_pic18.c: 92:     ANSELA=0x00;
-[e = _ANSELA -> -> 0 `i `uc ]
 "93
-[; ;encm369_pic18.c: 93:     LATA=0x80;
-[e = _LATA -> -> 128 `i `uc ]
+[; ;encm369_pic18.c: 93:     ANSELA=0x00;
+[e = _ANSELA -> -> 0 `i `uc ]
 "95
-[; ;encm369_pic18.c: 95: }
+[; ;encm369_pic18.c: 95:     LATA=0x80;
+[e = _LATA -> -> 128 `i `uc ]
+"97
+[; ;encm369_pic18.c: 97: }
 [e :UE 2273 ]
 }
-"110
-[; ;encm369_pic18.c: 110: void SysTickSetup(void)
+"112
+[; ;encm369_pic18.c: 112: void SysTickSetup(void)
 [v _SysTickSetup `(v ~T0 @X0 1 ef ]
-"111
-[; ;encm369_pic18.c: 111: {
+"113
+[; ;encm369_pic18.c: 113: {
 {
 [e :U _SysTickSetup ]
 [f ]
-"112
-[; ;encm369_pic18.c: 112:   G_u32SystemTime1ms = 0;
+"114
+[; ;encm369_pic18.c: 114:   G_u32SystemTime1ms = 0;
 [e = _G_u32SystemTime1ms -> -> -> 0 `i `l `ul ]
-"113
-[; ;encm369_pic18.c: 113:   G_u32SystemTime1s = 0;
-[e = _G_u32SystemTime1s -> -> -> 0 `i `l `ul ]
 "115
-[; ;encm369_pic18.c: 115: }
+[; ;encm369_pic18.c: 115:   G_u32SystemTime1s = 0;
+[e = _G_u32SystemTime1s -> -> -> 0 `i `l `ul ]
+"117
+[; ;encm369_pic18.c: 117: }
 [e :UE 2274 ]
 }
-"132
-[; ;encm369_pic18.c: 132: void SystemSleep(void)
+"134
+[; ;encm369_pic18.c: 134: void SystemSleep(void)
 [v _SystemSleep `(v ~T0 @X0 1 ef ]
-"133
-[; ;encm369_pic18.c: 133: {
+"135
+[; ;encm369_pic18.c: 135: {
 {
 [e :U _SystemSleep ]
 [f ]
-"135
-[; ;encm369_pic18.c: 135: }
+"137
+[; ;encm369_pic18.c: 137: }
 [e :UE 2275 ]
 }

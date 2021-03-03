@@ -27338,7 +27338,8 @@ void main(void)
     (LATA &= 0X7F);
     SystemSleep();
 
-    TimeXus(60000);
+    TimeXus(30000);
+
     while(1)
    {
         if(PIR3bits.TMR0IF==1)
@@ -27349,7 +27350,7 @@ void main(void)
 
     (LATA |= 0X80);
 
-    TimeXus(60000);
+    TimeXus(30000);
 
     while(1)
    {

@@ -61,7 +61,8 @@ void main(void)
     HEARTBEAT_OFF();
     SystemSleep();
 
-    TimeXus(60000);
+    TimeXus(30000);
+    
     while(1)
    {
         if(PIR3bits.TMR0IF==1)
@@ -72,7 +73,7 @@ void main(void)
     
     HEARTBEAT_ON();
     
-    TimeXus(60000);
+    TimeXus(30000);
     
     while(1)
    {

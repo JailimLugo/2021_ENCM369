@@ -31,9 +31,9 @@
 [v _ClockSetup ClockSetup `(v  1 e 1 0 ]
 "89
 [v _GpioSetup GpioSetup `(v  1 e 1 0 ]
-"110
+"112
 [v _SysTickSetup SysTickSetup `(v  1 e 1 0 ]
-"132
+"134
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]
 "35 C:\Github\ENCM369\2021_ENCM369\main.c
 [v _main main `(v  1 e 1 0 ]
@@ -82,14 +82,20 @@
 "35 C:\Github\ENCM369\2021_ENCM369\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"87
+"88
 } 0
 "133 C:\Github\ENCM369\2021_ENCM369\user_app.c
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
 "135
+[v UserAppRun@u8Pattern u8Pattern `[11]uc  1 a 11 0 ]
+"139
+[v UserAppRun@u8Initial u8Initial `uc  1 a 1 12 ]
+"134
+[v UserAppRun@F15925 F15925 `[11]uc  1 s 11 F15925 ]
+"141
 [v UserAppRun@u8Counter u8Counter `uc  1 s 1 u8Counter ]
-"148
+"155
 } 0
 "76
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
@@ -105,20 +111,20 @@
 [v TimeXus@u16UserInput u16UserInput `us  1 p 2 0 ]
 "130
 } 0
-"132 C:\Github\ENCM369\2021_ENCM369\encm369_pic18.c
+"134 C:\Github\ENCM369\2021_ENCM369\encm369_pic18.c
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]
 {
-"135
+"137
 } 0
-"110
+"112
 [v _SysTickSetup SysTickSetup `(v  1 e 1 0 ]
 {
-"115
+"117
 } 0
 "89
 [v _GpioSetup GpioSetup `(v  1 e 1 0 ]
 {
-"95
+"97
 } 0
 "70
 [v _ClockSetup ClockSetup `(v  1 e 1 0 ]

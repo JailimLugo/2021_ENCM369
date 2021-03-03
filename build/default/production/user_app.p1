@@ -2611,42 +2611,62 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppRun ]
 [f ]
-"135
-[; ;user_app.c: 135:     static u8 u8Counter = 0x80;
-[v F15925 `uc ~T0 @X0 1 s u8Counter ]
+[v F15925 `uc ~T0 @X0 -> 11 `i s ]
 [i F15925
--> -> 128 `i `uc
+:U ..
+"135
+[; ;user_app.c: 135:       u8 u8Pattern[] = {0x20,0x10,0x08,0x04,0x02,0x01,0x02,0x04,0x08,0x10,0x20};
+-> -> 32 `i `uc
+-> -> 16 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 16 `i `uc
+-> -> 32 `i `uc
+..
 ]
+[v _u8Pattern `uc ~T0 @X0 -> 11 `i a ]
+[e = _u8Pattern F15925 ]
 "137
-[; ;user_app.c: 137:     if(u8Counter == 0xFF)
-[e $ ! == -> F15925 `i -> 255 `i 2275  ]
-"138
-[; ;user_app.c: 138:     {
-{
+[; ;user_app.c: 137:       u8 u8PatternLength = 0x0B;
+[v _u8PatternLength `uc ~T0 @X0 1 a ]
+[e = _u8PatternLength -> -> 11 `i `uc ]
 "139
-[; ;user_app.c: 139:         u8Counter=0x80;
-[e = F15925 -> -> 128 `i `uc ]
-"140
-[; ;user_app.c: 140:     }
-}
-[e $U 2276  ]
+[; ;user_app.c: 139:        u8 u8Initial;
+[v _u8Initial `uc ~T0 @X0 1 a ]
 "141
-[; ;user_app.c: 141:     else
-[e :U 2275 ]
-"142
-[; ;user_app.c: 142:     {
-{
+[; ;user_app.c: 141:       static u8 u8Counter = 0x00;
+[v F15929 `uc ~T0 @X0 1 s u8Counter ]
+[i F15929
+-> -> 0 `i `uc
+]
 "143
-[; ;user_app.c: 143:         u8Counter=u8Counter+1;
-[e = F15925 -> + -> F15925 `i -> 1 `i `uc ]
+[; ;user_app.c: 143:       if(u8Counter >= u8PatternLength)
+[e $ ! >= -> F15929 `i -> _u8PatternLength `i 2275  ]
 "144
-[; ;user_app.c: 144:     }
+[; ;user_app.c: 144:       {
+{
+"145
+[; ;user_app.c: 145:           u8Counter = 0x00;
+[e = F15929 -> -> 0 `i `uc ]
+"147
+[; ;user_app.c: 147:       }
 }
-[e :U 2276 ]
-"146
-[; ;user_app.c: 146:     LATA= u8Counter;
-[e = _LATA F15925 ]
-"148
-[; ;user_app.c: 148: }
+[e :U 2275 ]
+"149
+[; ;user_app.c: 149:       u8Initial = LATA & 0xC0;
+[e = _u8Initial -> & -> _LATA `i -> 192 `i `uc ]
+"151
+[; ;user_app.c: 151:       LATA = ( u8Pattern[u8Counter] ) | u8Initial;
+[e = _LATA -> | -> *U + &U _u8Pattern * -> F15929 `ux -> -> # *U &U _u8Pattern `ui `ux `i -> _u8Initial `i `uc ]
+"153
+[; ;user_app.c: 153:       u8Counter = u8Counter +1;
+[e = F15929 -> + -> F15929 `i -> 1 `i `uc ]
+"155
+[; ;user_app.c: 155: }
 [e :UE 2274 ]
 }
