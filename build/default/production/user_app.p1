@@ -11,9 +11,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22235
 [; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 22235: extern volatile unsigned char TMR0L __attribute__((address(0x318)));
 [v _TMR0L `Vuc ~T0 @X0 0 e@792 ]
-"44870
-[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44870: extern volatile unsigned char PIR3 __attribute__((address(0x4B1)));
-[v _PIR3 `Vuc ~T0 @X0 0 e@1201 ]
+"44876
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44876:     struct {
+[s S2125 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2125 . SPI1RXIF SPI1TXIF SPI1IF TMR2IF TMR1IF TMR1GIF CCP1IF TMR0IF ]
+"44875
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44875: typedef union {
+[u S2124 `S2125 1 ]
+[n S2124 . . ]
+"44887
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44887: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x4B1)));
+[v _PIR3bits `VS2124 ~T0 @X0 0 e@1201 ]
 "45585
 [; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
 [v _LATA `Vuc ~T0 @X0 0 e@1214 ]
@@ -2573,23 +2581,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;user_app.c: 117: {
 [f ]
 "118
-[; ;user_app.c: 118:   T0CON0 = 0x10;
+[; ;user_app.c: 118:     T0CON0 = 0x10;
 [e = _T0CON0 -> -> 16 `i `uc ]
 "120
-[; ;user_app.c: 120:   u16 u16UserCount = 0xFFFF - u16UserInput;
+[; ;user_app.c: 120:     u16 u16UserCount = 0xFFFF - u16UserInput;
 [v _u16UserCount `us ~T0 @X0 1 a ]
 [e = _u16UserCount -> - -> 65535 `ui -> _u16UserInput `ui `us ]
 "122
-[; ;user_app.c: 122:   TMR0H = u16UserCount >> 8;
+[; ;user_app.c: 122:     TMR0H = u16UserCount >> 8;
 [e = _TMR0H -> >> -> _u16UserCount `ui -> 8 `i `uc ]
 "124
-[; ;user_app.c: 124:   TMR0L = u16UserCount & 0x00FF;
-[e = _TMR0L -> & -> _u16UserCount `ui -> -> 255 `i `ui `uc ]
+[; ;user_app.c: 124:     TMR0L = u16UserCount << 8;
+[e = _TMR0L -> << -> _u16UserCount `ui -> 8 `i `uc ]
 "126
-[; ;user_app.c: 126:   PIR3 = PIR3 & 0x7F;
-[e = _PIR3 -> & -> _PIR3 `i -> 127 `i `uc ]
+[; ;user_app.c: 126:     PIR3bits.TMR0IF=0;
+[e = . . _PIR3bits 0 7 -> -> 0 `i `uc ]
 "128
-[; ;user_app.c: 128:   T0CON0 = 0x90;
+[; ;user_app.c: 128:     T0CON0 = 0x90;
 [e = _T0CON0 -> -> 144 `i `uc ]
 "130
 [; ;user_app.c: 130: }
@@ -2604,18 +2612,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _UserAppRun ]
 [f ]
 "135
-[; ;user_app.c: 135:     u8 u8Counter = LATA;
-[v _u8Counter `uc ~T0 @X0 1 a ]
-[e = _u8Counter _LATA ]
+[; ;user_app.c: 135:     static u8 u8Counter = 0x80;
+[v F15925 `uc ~T0 @X0 1 s u8Counter ]
+[i F15925
+-> -> 128 `i `uc
+]
 "137
 [; ;user_app.c: 137:     if(u8Counter == 0xFF)
-[e $ ! == -> _u8Counter `i -> 255 `i 2275  ]
+[e $ ! == -> F15925 `i -> 255 `i 2275  ]
 "138
 [; ;user_app.c: 138:     {
 {
 "139
 [; ;user_app.c: 139:         u8Counter=0x80;
-[e = _u8Counter -> -> 128 `i `uc ]
+[e = F15925 -> -> 128 `i `uc ]
 "140
 [; ;user_app.c: 140:     }
 }
@@ -2628,15 +2638,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "143
 [; ;user_app.c: 143:         u8Counter=u8Counter+1;
-[e = _u8Counter -> + -> _u8Counter `i -> 1 `i `uc ]
+[e = F15925 -> + -> F15925 `i -> 1 `i `uc ]
 "144
 [; ;user_app.c: 144:     }
 }
 [e :U 2276 ]
 "146
 [; ;user_app.c: 146:     LATA= u8Counter;
-[e = _LATA _u8Counter ]
-"147
-[; ;user_app.c: 147: }
+[e = _LATA F15925 ]
+"148
+[; ;user_app.c: 148: }
 [e :UE 2274 ]
 }

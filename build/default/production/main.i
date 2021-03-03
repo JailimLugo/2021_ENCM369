@@ -27335,19 +27335,29 @@ void main(void)
 
 
 
-    (LATA &= 0x7F);
+    (LATA &= 0X7F);
     SystemSleep();
-    TimeXus(1000);
+
+    TimeXus(60000);
     while(1)
-    {
-        if(PIR3 == 0x80)
+   {
+        if(PIR3bits.TMR0IF==1)
         {
             break;
         }
     }
 
+    (LATA |= 0X80);
 
-    (LATA |= 0x80);
+    TimeXus(60000);
+
+    while(1)
+   {
+        if(PIR3bits.TMR0IF==1)
+        {
+            break;
+        }
+    }
 
   }
 

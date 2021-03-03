@@ -115,24 +115,24 @@ Promises:
 
 void TimeXus(u16 u16UserInput)
 {
-  T0CON0 = 0x10;
-  
-  u16 u16UserCount = 0xFFFF - u16UserInput;
-  
-  TMR0H = u16UserCount >> 8;
-  
-  TMR0L = u16UserCount & 0x00FF;
-  
-  PIR3 = PIR3 & 0x7F;
-  
-  T0CON0 = 0x90;
+    T0CON0 = 0x10;
     
+    u16 u16UserCount = 0xFFFF - u16UserInput;
+    
+    TMR0H = u16UserCount >> 8;
+    
+    TMR0L = u16UserCount << 8;
+    
+    PIR3bits.TMR0IF=0;
+    
+    T0CON0 = 0x90;
+     
 }
 
 
 void UserAppRun(void)
 {
-    u8 u8Counter = LATA;
+    static u8 u8Counter = 0x80;
     
     if(u8Counter == 0xFF)
     {
@@ -144,6 +144,7 @@ void UserAppRun(void)
     }
     
     LATA= u8Counter;
+      
 } /* end UserAppRun */
 
 
