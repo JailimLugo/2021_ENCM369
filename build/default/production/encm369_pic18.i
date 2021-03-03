@@ -27279,6 +27279,8 @@ void GpioSetup(void);
 
 void SysTickSetup(void);
 void SystemSleep(void);
+
+void TimeXus(u16 u16UserCount);
 # 101 "./configuration.h" 2
 
 
@@ -27304,40 +27306,20 @@ void ClockSetup(void)
 # 89 "encm369_pic18.c"
 void GpioSetup(void)
 {
-
-    LATA=0x80;
     TRISA=0x00;
     ANSELA=0x00;
+    LATA=0x80;
 
 }
-# 111 "encm369_pic18.c"
+# 110 "encm369_pic18.c"
 void SysTickSetup(void)
 {
   G_u32SystemTime1ms = 0;
   G_u32SystemTime1s = 0;
 
 }
-# 133 "encm369_pic18.c"
+# 132 "encm369_pic18.c"
 void SystemSleep(void)
 {
-
-}
-# 168 "encm369_pic18.c"
-void TimeXus(INPUT_PARAMETER_)
-{
-    if(INPUT_PARAMETER>65535)
-    {
-        return;
-    }
-
-    T0CON0bits.EN=0;
-
-    TMR0L=INPUT_PARAMETER/2;
-
-    TMR0H=INPUT_PARAMETER/2;
-
-    PIR3bits.TMR0IF=0;
-
-    T0CON0bits.EN=1;
 
 }

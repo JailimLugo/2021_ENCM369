@@ -21,12 +21,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "64 ./encm369_pic18.h
 [; ;./encm369_pic18.h: 64: void SystemSleep(void);
 [v _SystemSleep `(v ~T0 @X0 0 ef ]
-"66
-[; ;./encm369_pic18.h: 66: void TimeXus(u16 u16UserCount);
-[v _TimeXus `(v ~T0 @X0 0 ef1`us ]
-"44870 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44870: extern volatile unsigned char PIR3 __attribute__((address(0x4B1)));
-[v _PIR3 `Vuc ~T0 @X0 0 e@1201 ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "31
@@ -2605,44 +2599,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "62
 [; ;main.c: 62:     SystemSleep();
 [e ( _SystemSleep ..  ]
-"63
-[; ;main.c: 63:     TimeXus(1000);
-[e ( _TimeXus (1 -> -> 1000 `i `us ]
 "64
-[; ;main.c: 64:     while(1)
-[e :U 2277 ]
-"65
-[; ;main.c: 65:     {
-{
-"66
-[; ;main.c: 66:         if(PIR3 == 0x80)
-[e $ ! == -> _PIR3 `i -> 128 `i 2279  ]
-"67
-[; ;main.c: 67:         {
-{
-"68
-[; ;main.c: 68:             break;
-[e $U 2278  ]
-"69
-[; ;main.c: 69:         }
-}
-[e :U 2279 ]
-"70
-[; ;main.c: 70:     }
-}
-[e :U 2276 ]
-[e $U 2277  ]
-[e :U 2278 ]
-"73
-[; ;main.c: 73:     (LATA |= 0x80);
+[; ;main.c: 64:     (LATA |= 0X80);
 [e =| _LATA -> -> 128 `i `Vuc ]
-"75
-[; ;main.c: 75:   }
+"66
+[; ;main.c: 66:   }
 }
 [e :U 2273 ]
 [e $U 2274  ]
 [e :U 2275 ]
-"77
-[; ;main.c: 77: }
+"68
+[; ;main.c: 68: }
 [e :UE 2272 ]
 }

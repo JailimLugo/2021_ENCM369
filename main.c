@@ -60,7 +60,16 @@ void main(void)
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
-    //TimeXus(1000);
+    TimeXus(1000);
+    while(1)
+    {
+        if(PIR3 == 0x80)
+        {
+            break;
+        }
+    }
+    
+    
     HEARTBEAT_ON();
     
   } /* end while(1) main super loop */

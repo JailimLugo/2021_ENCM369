@@ -75,9 +75,10 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-    T0CON0=10010000;
     
-    T0CON1=01011000;
+    T0CON0=0x90;
+    
+    T0CON1=0x54;
       /*Timer 0 enabled,16-bit timer,1:1 postscaler,FOsc/4*,1:256 prescaler,asynchronized */
     
 
@@ -97,20 +98,47 @@ Promises:
 - 
 
 */
+
+/*--------------------------------------------------------------------------------------------------------------------
+ void TimeXus(INPUT_PARAMETER_)
+ Sets Timer0 to count u16Microseconds_
+ Requires:
+ - Timer0 configured such that each timer tick is 1 microsecond
+ -INPUT_PARAMETER_ is the value in microseconds to time from 1 to 65535
+ 
+ Promises:
+- Pre-loads TMR0H:L to clock out desired period
+- TMR0IF cleared
+- Timer0 enabled
+ */
+
+
+void TimeXus(u16 u16Count)
+{
+  T0CON0 = T0CON0 & 0x7F;
+    u16 u16StartPoint = 0xFFFF - u16Count;
+    TMR0H = u16StartPoint >> 8;
+    TMR0L = u16StartPoint & 0x00FF;
+    PIR3 = PIR3 & 0x7F;
+    T0CON0 = T0CON0 | 0x80;
+    
+}
+
+
 void UserAppRun(void)
 {
+    u8 u8Counter = LATA;
     
-    static u8 u8Counter=0x80; 
-
-    if(u8Counter==0xFF)  
+    if(u8Counter == 0x11111111)
     {
-        u8Counter=u8Counter && 0x80; 
+        u8Counter=0x10000000;
+    }
+    else
+    {
+        u8Counter=u8Counter+1;
     }
     
-    LATA=u8Counter; 
-    
-    u8Counter++; //Increment counter by one
-
+    LATA= u8Counter;
 } /* end UserAppRun */
 
 

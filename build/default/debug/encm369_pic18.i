@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "encm369_pic18.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,12 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-
-
-
-
-
+# 1 "encm369_pic18.c" 2
+# 24 "encm369_pic18.c"
 # 1 "./configuration.h" 1
 # 30 "./configuration.h"
 #pragma config FEXTOSC = OFF
@@ -27283,8 +27279,6 @@ void GpioSetup(void);
 
 void SysTickSetup(void);
 void SystemSleep(void);
-
-void TimeXus(u16 u16UserCount);
 # 101 "./configuration.h" 2
 
 
@@ -27296,59 +27290,54 @@ void TimeXus(u16 u16UserCount);
 void UserAppInitialize(void);
 void UserAppRun(void);
 # 106 "./configuration.h" 2
-# 6 "main.c" 2
-
-
-
-
-
-
-
-
-volatile u32 G_u32SystemTime1ms = 0;
-volatile u32 G_u32SystemTime1s = 0;
-volatile u32 G_u32SystemFlags = 0;
-# 35 "main.c"
-void main(void)
+# 24 "encm369_pic18.c" 2
+# 37 "encm369_pic18.c"
+extern volatile u32 G_u32SystemTime1ms;
+extern volatile u32 G_u32SystemTime1s;
+extern volatile u32 G_u32SystemFlags;
+# 70 "encm369_pic18.c"
+void ClockSetup(void)
 {
-  G_u32SystemFlags |= (u32)0x80000000;
 
 
-  ClockSetup();
-  SysTickSetup();
-  GpioSetup();
+}
+# 89 "encm369_pic18.c"
+void GpioSetup(void)
+{
 
+    LATA=0x80;
+    TRISA=0x00;
+    ANSELA=0x00;
 
+}
+# 111 "encm369_pic18.c"
+void SysTickSetup(void)
+{
+  G_u32SystemTime1ms = 0;
+  G_u32SystemTime1s = 0;
 
+}
+# 133 "encm369_pic18.c"
+void SystemSleep(void)
+{
 
-  UserAppInitialize();
-
-
-
-
-  while(1)
-  {
-
-
-
-    UserAppRun();
-
-
-
-    (LATA &= 0x7F);
-    SystemSleep();
-    TimeXus(1000);
-    while(1)
+}
+# 168 "encm369_pic18.c"
+void TimeXus(INPUT_PARAMETER_)
+{
+    if(INPUT_PARAMETER>65535)
     {
-        if(PIR3 == 0x80)
-        {
-            break;
-        }
+        return;
     }
 
+    T0CON0bits.EN=0;
 
-    (LATA |= 0x80);
+    TMR0L=INPUT_PARAMETER/2;
 
-  }
+    TMR0H=INPUT_PARAMETER/2;
+
+    PIR3bits.TMR0IF=0;
+
+    T0CON0bits.EN=1;
 
 }

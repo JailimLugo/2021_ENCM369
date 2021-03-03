@@ -88,10 +88,9 @@ Promises:
 */
 void GpioSetup(void)
 {
-    
-    LATA=0x80;
     TRISA=0x00;
     ANSELA=0x00;
+    LATA=0x80;
     
 } /* end GpioSetup() */
 
@@ -153,35 +152,6 @@ void SystemSleep(void)
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 
-/*--------------------------------------------------------------------------------------------------------------------
- void TimeXus(INPUT_PARAMETER_)
- Sets Timer0 to count u16Microseconds_
- Requires:
- - Timer0 configured such that each timer tick is 1 microsecond
- -INPUT_PARAMETER_ is the value in microseconds to time from 1 to 65535
- 
- Promises:
-- Pre-loads TMR0H:L to clock out desired period
-- TMR0IF cleared
-- Timer0 enabled
- */
-void TimeXus(INPUT_PARAMETER_)
-{
-    if(INPUT_PARAMETER>65535)
-    {
-        return;
-    }
-    
-    T0CON0bits.EN=0;
-  
-    TMR0L=INPUT_PARAMETER/2;
-    
-    TMR0H=INPUT_PARAMETER/2;
-    
-    PIR3bits.TMR0IF=0;
-    
-    T0CON0bits.EN=1;
-            
-}
+
 
 
