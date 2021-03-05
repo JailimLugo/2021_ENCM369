@@ -79,7 +79,7 @@ void UserAppInitialize(void)
     T0CON0=0x90;
     
     T0CON1=0x54;
-      /*Timer 0 enabled,16-bit timer,1:1 postscaler,FOsc/4*,1:256 prescaler,asynchronized */
+      /*Timer 0 enabled,16-bit timer,1:1 postscaler,FOsc/4*,1:16 prescaler,asynchronized */
     
 
 
