@@ -61,7 +61,7 @@ void main(void)
     HEARTBEAT_OFF();
     SystemSleep();
 
-    TimeXus(30000);
+    TimeXus(1000);
     
     while(1)
    {
@@ -73,7 +73,7 @@ void main(void)
     
     HEARTBEAT_ON();
     
-    TimeXus(30000);
+    TimeXus(1000);
     
     while(1)
    {
