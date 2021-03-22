@@ -68,12 +68,16 @@ void main(void)
      */ 
    
 #if 1 //Actual code
+      
     UserAppRun();
+    
     /* System sleep */
+    
     HEARTBEAT_OFF();
+    
     SystemSleep();
 
-    TimeXus(11);
+    TimeXus(11); //Setting the delay
     
     while(1)
    {
@@ -84,6 +88,7 @@ void main(void)
     }
     
     HEARTBEAT_ON();
+    
 #endif
 
   } /* end while(1) main super loop */
