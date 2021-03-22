@@ -2604,81 +2604,53 @@ Version 4.0 HI-TECH Software Intermediate Code
 "53
 [; ;main.c: 53:   {
 {
-"57
-[; ;main.c: 57:     UserAppRun();
-[e ( _UserAppRun ..  ]
-"61
-[; ;main.c: 61:     (LATA &= 0X7F);
-[e =& _LATA -> -> 127 `i `Vuc ]
-"62
-[; ;main.c: 62:     SystemSleep();
-[e ( _SystemSleep ..  ]
-"64
-[; ;main.c: 64:     TimeXus(30000);
-[e ( _TimeXus (1 -> -> 30000 `i `us ]
-"66
-[; ;main.c: 66:     while(1)
-[e :U 2277 ]
-"67
-[; ;main.c: 67:    {
-{
-"68
-[; ;main.c: 68:         if(PIR3bits.TMR0IF==1)
-[e $ ! == -> . . _PIR3bits 0 7 `i -> 1 `i 2279  ]
-"69
-[; ;main.c: 69:         {
-{
-"70
-[; ;main.c: 70:             break;
-[e $U 2278  ]
 "71
-[; ;main.c: 71:         }
-}
-[e :U 2279 ]
-"72
-[; ;main.c: 72:     }
-}
-[e :U 2276 ]
-[e $U 2277  ]
-[e :U 2278 ]
+[; ;main.c: 71:     UserAppRun();
+[e ( _UserAppRun ..  ]
+"73
+[; ;main.c: 73:     (LATA &= 0X7F);
+[e =& _LATA -> -> 127 `i `Vuc ]
 "74
-[; ;main.c: 74:     (LATA |= 0X80);
-[e =| _LATA -> -> 128 `i `Vuc ]
+[; ;main.c: 74:     SystemSleep();
+[e ( _SystemSleep ..  ]
 "76
-[; ;main.c: 76:     TimeXus(30000);
-[e ( _TimeXus (1 -> -> 30000 `i `us ]
+[; ;main.c: 76:     TimeXus(11);
+[e ( _TimeXus (1 -> -> 11 `i `us ]
 "78
 [; ;main.c: 78:     while(1)
-[e :U 2281 ]
+[e :U 2277 ]
 "79
 [; ;main.c: 79:    {
 {
 "80
 [; ;main.c: 80:         if(PIR3bits.TMR0IF==1)
-[e $ ! == -> . . _PIR3bits 0 7 `i -> 1 `i 2283  ]
+[e $ ! == -> . . _PIR3bits 0 7 `i -> 1 `i 2279  ]
 "81
 [; ;main.c: 81:         {
 {
 "82
 [; ;main.c: 82:             break;
-[e $U 2282  ]
+[e $U 2278  ]
 "83
 [; ;main.c: 83:         }
 }
-[e :U 2283 ]
+[e :U 2279 ]
 "84
 [; ;main.c: 84:     }
 }
-[e :U 2280 ]
-[e $U 2281  ]
-[e :U 2282 ]
+[e :U 2276 ]
+[e $U 2277  ]
+[e :U 2278 ]
 "86
-[; ;main.c: 86:   }
+[; ;main.c: 86:     (LATA |= 0X80);
+[e =| _LATA -> -> 128 `i `Vuc ]
+"89
+[; ;main.c: 89:   }
 }
 [e :U 2273 ]
 [e $U 2274  ]
 [e :U 2275 ]
-"88
-[; ;main.c: 88: }
+"91
+[; ;main.c: 91: }
 [e :UE 2272 ]
 }

@@ -27283,6 +27283,8 @@ void GpioSetup(void);
 
 void SysTickSetup(void);
 void SystemSleep(void);
+
+void TimeXus(u16 u16UserCount);
 # 101 "./configuration.h" 2
 
 
@@ -27333,8 +27335,18 @@ void main(void)
 
 
 
-    (LATA &= 0x7F);
+    (LATA &= 0X7F);
     SystemSleep();
+
+    TimeXus(2);
+
+    while(1)
+   {
+        if(PIR3bits.TMR0IF==1)
+        {
+            break;
+        }
+    }
 
     (LATA |= 0X80);
 

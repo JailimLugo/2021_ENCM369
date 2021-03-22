@@ -21,6 +21,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "64 ./encm369_pic18.h
 [; ;./encm369_pic18.h: 64: void SystemSleep(void);
 [v _SystemSleep `(v ~T0 @X0 0 ef ]
+"66
+[; ;./encm369_pic18.h: 66: void TimeXus(u16 u16UserCount);
+[v _TimeXus `(v ~T0 @X0 0 ef1`us ]
+"44876 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44876:     struct {
+[s S2125 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2125 . SPI1RXIF SPI1TXIF SPI1IF TMR2IF TMR1IF TMR1GIF CCP1IF TMR0IF ]
+"44875
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44875: typedef union {
+[u S2124 `S2125 1 ]
+[n S2124 . . ]
+"44887
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44887: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x4B1)));
+[v _PIR3bits `VS2124 ~T0 @X0 0 e@1201 ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "31
@@ -2594,21 +2608,49 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 57:     UserAppRun();
 [e ( _UserAppRun ..  ]
 "61
-[; ;main.c: 61:     (LATA &= 0x7F);
+[; ;main.c: 61:     (LATA &= 0X7F);
 [e =& _LATA -> -> 127 `i `Vuc ]
 "62
 [; ;main.c: 62:     SystemSleep();
 [e ( _SystemSleep ..  ]
 "64
-[; ;main.c: 64:     (LATA |= 0X80);
-[e =| _LATA -> -> 128 `i `Vuc ]
+[; ;main.c: 64:     TimeXus(2);
+[e ( _TimeXus (1 -> -> 2 `i `us ]
 "66
-[; ;main.c: 66:   }
+[; ;main.c: 66:     while(1)
+[e :U 2277 ]
+"67
+[; ;main.c: 67:    {
+{
+"68
+[; ;main.c: 68:         if(PIR3bits.TMR0IF==1)
+[e $ ! == -> . . _PIR3bits 0 7 `i -> 1 `i 2279  ]
+"69
+[; ;main.c: 69:         {
+{
+"70
+[; ;main.c: 70:             break;
+[e $U 2278  ]
+"71
+[; ;main.c: 71:         }
+}
+[e :U 2279 ]
+"72
+[; ;main.c: 72:     }
+}
+[e :U 2276 ]
+[e $U 2277  ]
+[e :U 2278 ]
+"74
+[; ;main.c: 74:     (LATA |= 0X80);
+[e =| _LATA -> -> 128 `i `Vuc ]
+"76
+[; ;main.c: 76:   }
 }
 [e :U 2273 ]
 [e $U 2274  ]
 [e :U 2275 ]
-"68
-[; ;main.c: 68: }
+"78
+[; ;main.c: 78: }
 [e :UE 2272 ]
 }

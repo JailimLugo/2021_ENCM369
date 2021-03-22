@@ -27279,6 +27279,8 @@ void GpioSetup(void);
 
 void SysTickSetup(void);
 void SystemSleep(void);
+
+void TimeXus(u16 u16UserCount);
 # 101 "./configuration.h" 2
 
 
@@ -27309,27 +27311,63 @@ extern volatile u32 G_u32SystemFlags;
 # 76 "user_app.c"
 void UserAppInitialize(void)
 {
-    T0CON0=10010000;
 
-    T0CON1=01011000;
+    T0CON0=0x90;
 
+    T0CON1=0x54;
+
+
+
+    DAC1DATL = 0;
 
 
 
 }
-# 100 "user_app.c"
-void UserAppRun(void)
+# 119 "user_app.c"
+void TimeXus(u16 u16UserInput)
 {
+    T0CON0 = 0x10;
 
-    static u8 u8Counter=0x80;
+    u16 u16UserCount = 0xFFFF - u16UserInput;
 
-    if(u8Counter==0xFF)
+    TMR0H = u16UserCount >> 8;
+
+    TMR0L = u16UserCount & 0x00FF;
+
+
+    PIR3bits.TMR0IF=0;
+
+    T0CON0 = 0x90;
+
+}
+
+
+void UserAppRun(void)
+
+{
+    static _Bool bGoingUp =1;
+
+    if(DAC1DATL == 255)
     {
-        u8Counter=u8Counter && 0x80;
+        bGoingUp = 0;
+    }
+    if(DAC1DATL == 0)
+    {
+        bGoingUp=1;
     }
 
-    LATA=u8Counter;
+    if(bGoingUp)
+    {
+        DAC1DATL++;
 
-    u8Counter++;
+    }
+    else
+    {
+        DAC1DATL--;
+    }
+
+
+
+
 
 }

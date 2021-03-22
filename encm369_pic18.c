@@ -92,9 +92,7 @@ void GpioSetup(void)
     
     ANSELA=0x00;
     
-    LATA=0x80;
-    
-    /* Configure DAC1 for Vdd and Vss references, on , and RA2 output.*/
+    /* Configure DAC1 for Vdd and Vss,on , and RA2 output.*/
     DAC1CON = 0xA0;
     
 } /* end GpioSetup() */
