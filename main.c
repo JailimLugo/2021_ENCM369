@@ -54,8 +54,8 @@ void main(void)
     /* Drivers */
        
     /* Applications */
-    
-     /*TimeXus(2); //Temporary to make fast sawtooth
+#if 0 //Temporary to make fast sawtooth
+     TimeXus(2); 
     
     while(1)
    {
@@ -65,9 +65,10 @@ void main(void)
         }
     }
     DAC1DATL+=4;
-     */ 
+#endif
+     
    
-#if 1 //Actual code
+#if 1 //Actual code implementation for sinusoid
       
     UserAppRun();
     

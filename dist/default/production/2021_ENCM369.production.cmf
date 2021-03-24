@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\jaili\AppData\Local\Temp\sckg.o
+$C:\Users\jaili\AppData\Local\Temp\sbno.o
 idloc IDLOC 5 200000 200000 20 1
 init CODE 0 1FFFC 1FFFC 4 1
 reset_vec CODE 0 0 0 4 1
@@ -125,49 +125,49 @@ $dist/default/production\2021_ENCM369.production.o
 1FE24 text2 CODE >104:C:\Github\ENCM369\2021_ENCM369\user_app.c
 1FE2A text2 CODE >108:C:\Github\ENCM369\2021_ENCM369\user_app.c
 1FE2C text1 CODE >156:C:\Github\ENCM369\2021_ENCM369\user_app.c
-1FE2C text1 CODE >161:C:\Github\ENCM369\2021_ENCM369\user_app.c
-1FE3E text1 CODE >163:C:\Github\ENCM369\2021_ENCM369\user_app.c
-1FE42 text1 CODE >197:C:\Github\ENCM369\2021_ENCM369\user_app.c
+1FE2C text1 CODE >162:C:\Github\ENCM369\2021_ENCM369\user_app.c
+1FE3E text1 CODE >164:C:\Github\ENCM369\2021_ENCM369\user_app.c
+1FE42 text1 CODE >199:C:\Github\ENCM369\2021_ENCM369\user_app.c
 1FEBC text0 CODE >35:C:\Github\ENCM369\2021_ENCM369\main.c
 1FEBC text0 CODE >37:C:\Github\ENCM369\2021_ENCM369\main.c
 1FEBE text0 CODE >40:C:\Github\ENCM369\2021_ENCM369\main.c
 1FEC2 text0 CODE >41:C:\Github\ENCM369\2021_ENCM369\main.c
 1FEC6 text0 CODE >42:C:\Github\ENCM369\2021_ENCM369\main.c
 1FECA text0 CODE >47:C:\Github\ENCM369\2021_ENCM369\main.c
-1FECE text0 CODE >71:C:\Github\ENCM369\2021_ENCM369\main.c
-1FED2 text0 CODE >73:C:\Github\ENCM369\2021_ENCM369\main.c
-1FED4 text0 CODE >74:C:\Github\ENCM369\2021_ENCM369\main.c
-1FED8 text0 CODE >76:C:\Github\ENCM369\2021_ENCM369\main.c
-1FEE4 text0 CODE >80:C:\Github\ENCM369\2021_ENCM369\main.c
-1FEF2 text0 CODE >86:C:\Github\ENCM369\2021_ENCM369\main.c
-1FE86 cinit CODE >5361:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE86 cinit CODE >5363:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE86 cinit CODE >5366:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE86 cinit CODE >5398:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE88 cinit CODE >5399:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE8A cinit CODE >5400:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE8C cinit CODE >5401:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE8E cinit CODE >5402:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE90 cinit CODE >5403:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE92 cinit CODE >5404:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE96 cinit CODE >5405:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE9A cinit CODE >5406:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE9A cinit CODE >5407:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FE9C cinit CODE >5408:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEA0 cinit CODE >5409:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEA2 cinit CODE >5410:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEA4 cinit CODE >5411:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEA6 cinit CODE >5412:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEA8 cinit CODE >5413:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEAA cinit CODE >5417:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEAE cinit CODE >5418:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEB0 cinit CODE >5419:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEB0 cinit CODE >5420:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEB2 cinit CODE >5421:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEB4 cinit CODE >5422:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEB6 cinit CODE >5428:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEB6 cinit CODE >5430:C:\Users\jaili\AppData\Local\Temp\sckg.s
-1FEB8 cinit CODE >5431:C:\Users\jaili\AppData\Local\Temp\sckg.s
+1FECE text0 CODE >73:C:\Github\ENCM369\2021_ENCM369\main.c
+1FED2 text0 CODE >77:C:\Github\ENCM369\2021_ENCM369\main.c
+1FED4 text0 CODE >79:C:\Github\ENCM369\2021_ENCM369\main.c
+1FED8 text0 CODE >81:C:\Github\ENCM369\2021_ENCM369\main.c
+1FEE4 text0 CODE >85:C:\Github\ENCM369\2021_ENCM369\main.c
+1FEF2 text0 CODE >91:C:\Github\ENCM369\2021_ENCM369\main.c
+1FE86 cinit CODE >5361:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE86 cinit CODE >5363:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE86 cinit CODE >5366:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE86 cinit CODE >5398:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE88 cinit CODE >5399:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE8A cinit CODE >5400:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE8C cinit CODE >5401:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE8E cinit CODE >5402:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE90 cinit CODE >5403:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE92 cinit CODE >5404:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE96 cinit CODE >5405:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE9A cinit CODE >5406:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE9A cinit CODE >5407:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FE9C cinit CODE >5408:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEA0 cinit CODE >5409:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEA2 cinit CODE >5410:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEA4 cinit CODE >5411:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEA6 cinit CODE >5412:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEA8 cinit CODE >5413:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEAA cinit CODE >5417:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEAE cinit CODE >5418:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEB0 cinit CODE >5419:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEB0 cinit CODE >5420:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEB2 cinit CODE >5421:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEB4 cinit CODE >5422:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEB6 cinit CODE >5428:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEB6 cinit CODE >5430:C:\Users\jaili\AppData\Local\Temp\sbno.s
+1FEB8 cinit CODE >5431:C:\Users\jaili\AppData\Local\Temp\sbno.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -188,25 +188,25 @@ __Hspace_2 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __HidataBANK6 0 0 ABS 0 idataBANK6 dist/default/production\2021_ENCM369.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\2021_ENCM369.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\jaili\AppData\Local\Temp\sckg.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\jaili\AppData\Local\Temp\sbno.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
 __end_of_TimeXus 1FE64 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\2021_ENCM369.production.o
 _LATA 4BE 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-___sp 0 0 STACK 2 stack C:\Users\jaili\AppData\Local\Temp\sckg.o
+___sp 0 0 STACK 2 stack C:\Users\jaili\AppData\Local\Temp\sbno.o
 _main 1FEBC 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
-start 1FFFC 0 CODE 0 init C:\Users\jaili\AppData\Local\Temp\sckg.o
+start 1FFFC 0 CODE 0 init C:\Users\jaili\AppData\Local\Temp\sbno.o
 __size_of_main 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 _DAC1DATL 7D 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __size_of_SystemSleep 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __LidataBANK6 0 0 ABS 0 idataBANK6 dist/default/production\2021_ENCM369.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
-__accesstop 560 0 ABS 0 - C:\Users\jaili\AppData\Local\Temp\sckg.o
-intlevel0 0 0 CODE 0 text C:\Users\jaili\AppData\Local\Temp\sckg.o
-intlevel1 0 0 CODE 0 text C:\Users\jaili\AppData\Local\Temp\sckg.o
-intlevel2 0 0 CODE 0 text C:\Users\jaili\AppData\Local\Temp\sckg.o
-intlevel3 0 0 CODE 0 text C:\Users\jaili\AppData\Local\Temp\sckg.o
+__accesstop 560 0 ABS 0 - C:\Users\jaili\AppData\Local\Temp\sbno.o
+intlevel0 0 0 CODE 0 text C:\Users\jaili\AppData\Local\Temp\sbno.o
+intlevel1 0 0 CODE 0 text C:\Users\jaili\AppData\Local\Temp\sbno.o
+intlevel2 0 0 CODE 0 text C:\Users\jaili\AppData\Local\Temp\sbno.o
+intlevel3 0 0 CODE 0 text C:\Users\jaili\AppData\Local\Temp\sbno.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\2021_ENCM369.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\2021_ENCM369.production.o
@@ -214,8 +214,8 @@ __Hclrtext 0 0 ABS 0 clrtext dist/default/production\2021_ENCM369.production.o
 _UserAppRun 1FE2C 0 CODE 0 text1 dist/default/production\2021_ENCM369.production.o
 _ANSELA 400 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _G_u32SystemTime1s 505 0 COMRAM 1 bssCOMRAM dist/default/production\2021_ENCM369.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\jaili\AppData\Local\Temp\sckg.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\jaili\AppData\Local\Temp\sckg.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\jaili\AppData\Local\Temp\sbno.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\jaili\AppData\Local\Temp\sbno.o
 _DAC1CON 7F 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\2021_ENCM369.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\2021_ENCM369.production.o
@@ -281,7 +281,7 @@ __Hbank36 0 0 ABS 0 bank36 dist/default/production\2021_ENCM369.production.o
 __Hbank37 0 0 ABS 0 bank37 dist/default/production\2021_ENCM369.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\2021_ENCM369.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\2021_ENCM369.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\jaili\AppData\Local\Temp\sckg.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\jaili\AppData\Local\Temp\sbno.o
 _SystemSleep 1FE06 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\2021_ENCM369.production.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/production\2021_ENCM369.production.o
@@ -377,8 +377,8 @@ __end_of_SysTickSetup 1FE86 0 CODE 0 text5 dist/default/production\2021_ENCM369.
 _UserAppInitialize 1FE1A 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\2021_ENCM369.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\2021_ENCM369.production.o
-stackhi 25FF 0 ABS 0 - C:\Users\jaili\AppData\Local\Temp\sckg.o
-stacklo 700 0 ABS 0 - C:\Users\jaili\AppData\Local\Temp\sckg.o
+stackhi 25FF 0 ABS 0 - C:\Users\jaili\AppData\Local\Temp\sbno.o
+stacklo 700 0 ABS 0 - C:\Users\jaili\AppData\Local\Temp\sbno.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\2021_ENCM369.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -405,7 +405,7 @@ __ptext5 1FE64 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
 __ptext6 1FE08 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
 __ptext7 1FE04 0 CODE 0 text7 dist/default/production\2021_ENCM369.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\2021_ENCM369.production.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\jaili\AppData\Local\Temp\sckg.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\jaili\AppData\Local\Temp\sbno.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
 _ClockSetup 1FE04 0 CODE 0 text7 dist/default/production\2021_ENCM369.production.o

@@ -2877,32 +2877,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppRun ]
 [f ]
-"159
-[; ;user_app.c: 159:     static u8 u8Index= 0;
+"160
+[; ;user_app.c: 160:     static u8 u8Index= 0;
 [v F15926 `uc ~T0 @X0 1 s u8Index ]
 [i F15926
 -> -> 0 `i `uc
 ]
-"161
-[; ;user_app.c: 161:     DAC1DATL = UserApp_au8sinTable[u8Index];
+"162
+[; ;user_app.c: 162:     DAC1DATL = UserApp_au8sinTable[u8Index];
 [e = _DAC1DATL *U + &U _UserApp_au8sinTable * -> F15926 `ux -> -> # *U &U _UserApp_au8sinTable `ui `ux ]
-"163
-[; ;user_app.c: 163:     u8Index+=4;
+"164
+[; ;user_app.c: 164:     u8Index+=4;
 [e =+ F15926 -> -> 4 `i `uc ]
-"165
-[; ;user_app.c: 165:     if (u8Index == 256)
-[e $ ! == -> F15926 `i -> 256 `i 2275  ]
 "166
-[; ;user_app.c: 166:     {
-{
+[; ;user_app.c: 166:     if (u8Index == 256)
+[e $ ! == -> F15926 `i -> 256 `i 2275  ]
 "167
-[; ;user_app.c: 167:         u8Index=0;
-[e = F15926 -> -> 0 `i `uc ]
+[; ;user_app.c: 167:     {
+{
 "168
-[; ;user_app.c: 168:     }
+[; ;user_app.c: 168:         u8Index=0;
+[e = F15926 -> -> 0 `i `uc ]
+"169
+[; ;user_app.c: 169:     }
 }
 [e :U 2275 ]
-"197
-[; ;user_app.c: 197: }
+"199
+[; ;user_app.c: 199: }
 [e :UE 2274 ]
 }

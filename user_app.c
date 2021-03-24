@@ -156,6 +156,7 @@ void TimeXus(u16 u16UserInput)
 void UserAppRun(void)
 
 {
+
     static u8 u8Index= 0; //Setting static variable for index to 0 to start 
     
     DAC1DATL = UserApp_au8sinTable[u8Index]; //Outputting the array value at u8Index
@@ -166,6 +167,7 @@ void UserAppRun(void)
     {
         u8Index=0;
     }
+
     
 #if 0 //Code for triangle wave 
     static bool bGoingUp =true;

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Sun Mar 21 23:32:13 2021
+                                                                                               Wed Mar 24 01:27:30 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F27Q43
@@ -496,16 +496,16 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    472  01FECA  EC0D  F0FF         	call	_UserAppInitialize	;wreg free
    473  01FECE                     l834:
    474                           
-   475                           ;main.c: 53:   {;main.c: 71:     UserAppRun();
+   475                           ;main.c: 53:   {;main.c: 73:     UserAppRun();
    476  01FECE  EC16  F0FF         	call	_UserAppRun	;wreg free
    477  01FED2                     
-   478                           ;main.c: 73:     (LATA &= 0X7F);
+   478                           ;main.c: 77:     (LATA &= 0X7F);
    479  01FED2  9EBE               	bcf	190,7,c	;volatile
    480  01FED4                     
-   481                           ;main.c: 74:     SystemSleep();
+   481                           ;main.c: 79:     SystemSleep();
    482  01FED4  EC03  F0FF         	call	_SystemSleep	;wreg free
    483  01FED8                     
-   484                           ;main.c: 76:     TimeXus(11);
+   484                           ;main.c: 81:     TimeXus(11);
    485  01FED8  0E00               	movlw	0
    486  01FEDA  6E10               	movwf	(TimeXus@u16UserInput+1)^(0+1280),c
    487  01FEDC  0E0B               	movlw	11
@@ -513,7 +513,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    489  01FEE0  EC22  F0FF         	call	_TimeXus	;wreg free
    490  01FEE4                     l842:
    491                           
-   492                           ;main.c: 79:    {;main.c: 80:         if(PIR3bits.TMR0IF==1)
+   492                           ;main.c: 84:    {;main.c: 85:         if(PIR3bits.TMR0IF==1)
    493  01FEE4  AEB1               	btfss	177,7,c	;volatile
    494  01FEE6  EF77  F0FF         	goto	u21
    495  01FEEA  EF79  F0FF         	goto	u20
@@ -521,7 +521,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    497  01FEEE  EF72  F0FF         	goto	l842
    498  01FEF2                     u20:
    499  01FEF2                     
-   500                           ;main.c: 86:     (LATA |= 0X80);
+   500                           ;main.c: 91:     (LATA |= 0X80);
    501  01FEF2  8EBE               	bsf	190,7,c	;volatile
    502  01FEF4  EF67  F0FF         	goto	l834
    503  01FEF8  EFFE  F0FF         	goto	start
@@ -573,7 +573,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    539  01FE2C                     _UserAppRun:
    540                           	callstack 127
    541  01FE2C                     
-   542                           ;user_app.c: 159:     static u8 u8Index= 0;;user_app.c: 161:     DAC1DATL = UserApp_au8s
+   542                           ;user_app.c: 160:     static u8 u8Index= 0;;user_app.c: 162:     DAC1DATL = UserApp_au8s
       +                          inTable[u8Index];
    543  01FE2C  0E00               	movlw	low _UserApp_au8sinTable
    544  01FE2E  240D               	addwf	UserAppRun@u8Index^(0+1280),w,c
@@ -586,7 +586,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    551  01FE3C  6F7D               	movwf	125,b	;volatile
    552  01FE3E                     
    553                           ; BSR set to: 0
-   554                           ;user_app.c: 163:     u8Index+=4;
+   554                           ;user_app.c: 164:     u8Index+=4;
    555  01FE3E  0E04               	movlw	4
    556  01FE40  260D               	addwf	UserAppRun@u8Index^(0+1280),f,c
    557  01FE42                     
@@ -1519,7 +1519,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Sun Mar 21 23:32:13 2021
+Symbol Table                                                                                   Wed Mar 24 01:27:30 2021
 
      __size_of_SysTickSetup 0022                          l13 FE04                          l22 FE06  
                         l16 FE18                          l19 FE84                          l80 FE62  

@@ -27328,10 +27328,13 @@ void main(void)
 
   while(1)
   {
-# 71 "main.c"
+# 73 "main.c"
     UserAppRun();
 
+
+
     (LATA &= 0X7F);
+
     SystemSleep();
 
     TimeXus(11);
@@ -27345,6 +27348,7 @@ void main(void)
     }
 
     (LATA |= 0X80);
+
 
 
   }
