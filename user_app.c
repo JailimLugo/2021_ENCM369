@@ -217,7 +217,7 @@ void UserAppInitialize(void)
     T1CLK  = 0x01;  
     T1CON  = 0x31;  // b'00110001'
     
-    // Test call to set frequency
+    /*InterruptTimerXus(16,true);*/// Test call to set frequency
  
     
 } /* end UserAppInitialize() */
@@ -237,8 +237,54 @@ Promises:
 */
 void UserAppRun(void)
 {
+ 
+    static u8 u8NoteNumber = 0;
+    u16 u16SongNotesArray [] = 
+    {
+        C4,C4,G4,G4,A4,A4,G4,F4,
+        F4,E4,E4,D4,D4,C4,G4,G4,
+        F4,F4,E4,E4,D4,G4,G4,F4,
+        F4,E4,E4,D4,C4,C4,G4,G4,
+        A4,A4,G4,F4,F4,E4,E4,D4,
+        D4,C4
+    };
 
-  
+    u16 u16SongNoteDurationArray [] = {
+        N4,N4,N4,N4,N4,N4,N2,N4,
+        N4,N4,N4,N4,N4,N2,N4,N4,
+        N4,N4,N4,N4,N2,N4,N4,N4,
+        N4,N4,N4,N2,N4,N4,N4,N4,
+        N4,N4,N2,N4,N4,N4,N4,N4,
+        N4,N1
+    };
+        
+    
+    InterruptTimerXus(u16SongNotesArray[u8NoteNumber],true);
+    
+    for(int i = 0; i<1000;i++){
+        
+        TimeXus(u16SongNoteDurationArray[u8NoteNumber]);
+        
+        while( PIR3bits.TMR0IF == 0);
+    }
+    InterruptTimerXus(NN,true);
+    
+    for(int i = 0; i<1000;i++){
+        
+        TimeXus(u16SongNoteDurationArray[u8NoteNumber]);
+        
+        while( PIR3bits.TMR0IF == 0);
+    }
+    
+    if (u8NoteNumber > 41)
+    {
+        u8NoteNumber = 0;
+    }
+    else 
+    {
+        u8NoteNumber = u8NoteNumber +1;
+    }
+
 } /* end UserAppRun() */
 
 
