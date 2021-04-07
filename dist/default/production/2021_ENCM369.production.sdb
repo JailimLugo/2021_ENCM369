@@ -214,20 +214,20 @@
 "238 C:\Github\ENCM369\2021_ENCM369\user_app.c
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
-"255
-[v UserAppRun@i_277 i `i  1 a 2 170 ]
-"250
-[v UserAppRun@i i `i  1 a 2 168 ]
-"246
-[v UserAppRun@u16SongNoteDurationArray u16SongNoteDurationArray `[42]us  1 a 84 84 ]
-"242
-[v UserAppRun@u16SongNotesArray u16SongNotesArray `[42]us  1 a 84 0 ]
+"286
+[v UserAppRun@i_277 i `i  1 a 2 186 ]
+"278
+[v UserAppRun@i i `i  1 a 2 184 ]
+"259
+[v UserAppRun@u16SongNoteDurationArray u16SongNoteDurationArray `[46]us  1 a 92 92 ]
+"243
+[v UserAppRun@u16SongNotesArray u16SongNotesArray `[46]us  1 a 92 0 ]
 "241
 [v UserAppRun@u8NoteNumber u8NoteNumber `uc  1 s 1 u8NoteNumber ]
-[v UserAppRun@F15950 F15950 `[42]us  1 s 84 F15950 ]
-"242
-[v UserAppRun@F15952 F15952 `[42]us  1 s 84 F15952 ]
-"272
+[v UserAppRun@F15950 F15950 `[46]us  1 s 92 F15950 ]
+"243
+[v UserAppRun@F15952 F15952 `[46]us  1 s 92 F15952 ]
+"302
 } 0
 "94
 [v _TimeXus TimeXus `(v  1 e 1 0 ]

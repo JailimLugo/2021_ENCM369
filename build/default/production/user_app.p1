@@ -3049,62 +3049,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i F15949
 -> -> 0 `i `uc
 ]
-[v F15950 `us ~T0 @X0 -> 42 `i s ]
+[v F15950 `us ~T0 @X0 -> 46 `i s ]
 [i F15950
 :U ..
-"242
-[; ;user_app.c: 242:     u16 u16SongNotesArray [] = {
--> -> 60 `i `us
--> -> 60 `i `us
--> -> 40 `i `us
--> -> 40 `i `us
--> -> 36 `i `us
--> -> 36 `i `us
--> -> 40 `i `us
--> -> 45 `i `us
--> -> 45 `i `us
+"243
+[; ;user_app.c: 243:     u16 u16SongNotesArray [] =
 -> -> 47 `i `us
 -> -> 47 `i `us
--> -> 53 `i `us
--> -> 53 `i `us
--> -> 60 `i `us
+-> -> 45 `i `us
 -> -> 40 `i `us
 -> -> 40 `i `us
 -> -> 45 `i `us
--> -> 45 `i `us
--> -> 47 `i `us
--> -> 47 `i `us
--> -> 53 `i `us
--> -> 40 `i `us
--> -> 40 `i `us
--> -> 45 `i `us
--> -> 45 `i `us
--> -> 47 `i `us
 -> -> 47 `i `us
 -> -> 53 `i `us
 -> -> 60 `i `us
 -> -> 60 `i `us
--> -> 40 `i `us
--> -> 40 `i `us
--> -> 36 `i `us
--> -> 36 `i `us
--> -> 40 `i `us
--> -> 45 `i `us
--> -> 45 `i `us
+-> -> 53 `i `us
 -> -> 47 `i `us
 -> -> 47 `i `us
 -> -> 53 `i `us
+-> -> 53 `i `us
+-> -> 47 `i `us
+-> -> 47 `i `us
+-> -> 45 `i `us
+-> -> 40 `i `us
+-> -> 40 `i `us
+-> -> 45 `i `us
+-> -> 47 `i `us
 -> -> 53 `i `us
 -> -> 60 `i `us
+-> -> 60 `i `us
+-> -> 53 `i `us
+-> -> 47 `i `us
+-> -> 53 `i `us
+-> -> 60 `i `us
+-> -> 60 `i `us
+-> -> 53 `i `us
+-> -> 47 `i `us
+-> -> 60 `i `us
+-> -> 53 `i `us
+-> -> 47 `i `us
+-> -> 45 `i `us
+-> -> 47 `i `us
+-> -> 60 `i `us
+-> -> 53 `i `us
+-> -> 47 `i `us
+-> -> 45 `i `us
+-> -> 47 `i `us
+-> -> 53 `i `us
+-> -> 60 `i `us
+-> -> 53 `i `us
+-> -> 79 `i `us
 ..
 ]
-[v _u16SongNotesArray `us ~T0 @X0 -> 42 `i a ]
+[v _u16SongNotesArray `us ~T0 @X0 -> 46 `i a ]
 [e = _u16SongNotesArray F15950 ]
-[v F15952 `us ~T0 @X0 -> 42 `i s ]
+[v F15952 `us ~T0 @X0 -> 46 `i s ]
 [i F15952
 :U ..
-"246
-[; ;user_app.c: 246:     u16 u16SongNoteDurationArray [] = {
+"259
+[; ;user_app.c: 259:     u16 u16SongNoteDurationArray [] =
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
@@ -3112,130 +3122,128 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
 -> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 8 `i `ui `us
 -> -> 2048 `i `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 8 `i `ui `us
+-> -> 2048 `i `us
+-> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 8 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 8 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 8 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 8 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
 ..
 ]
-[v _u16SongNoteDurationArray `us ~T0 @X0 -> 42 `i a ]
+[v _u16SongNoteDurationArray `us ~T0 @X0 -> 46 `i a ]
 [e = _u16SongNoteDurationArray F15952 ]
-"249
-[; ;user_app.c: 249:         InterruptTimerXus(u16SongNotesArray[u8NoteNumber],1);
+"276
+[; ;user_app.c: 276:     InterruptTimerXus(u16SongNotesArray[u8NoteNumber],1);
 [e ( _InterruptTimerXus (2 , *U + &U _u16SongNotesArray * -> F15949 `ux -> -> # *U &U _u16SongNotesArray `ui `ux -> -> 1 `i `a ]
-"250
-[; ;user_app.c: 250:     for(int i = 0; i<1000;i++){
+"278
+[; ;user_app.c: 278:     for(int i = 0; i<450;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 1000 `i 2278  ]
+[e $ < _i -> 450 `i 2278  ]
 [e $U 2279  ]
 [e :U 2278 ]
 {
-"251
-[; ;user_app.c: 251:         TimeXus(u16SongNoteDurationArray[u8NoteNumber]);
+"280
+[; ;user_app.c: 280:         TimeXus(u16SongNoteDurationArray[u8NoteNumber]);
 [e ( _TimeXus (1 *U + &U _u16SongNoteDurationArray * -> F15949 `ux -> -> # *U &U _u16SongNoteDurationArray `ui `ux ]
-"252
-[; ;user_app.c: 252:         while( PIR3bits.TMR0IF == 0);
+"282
+[; ;user_app.c: 282:         while( PIR3bits.TMR0IF == 0);
 [e $U 2281  ]
 [e :U 2282 ]
 [e :U 2281 ]
 [e $ == -> . . _PIR3bits 0 7 `i -> 0 `i 2282  ]
 [e :U 2283 ]
-"253
-[; ;user_app.c: 253:     }
+"283
+[; ;user_app.c: 283:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 1000 `i 2278  ]
+[e $ < _i -> 450 `i 2278  ]
 [e :U 2279 ]
 }
-"254
-[; ;user_app.c: 254:     InterruptTimerXus((u16)(u16)0,1);
+"284
+[; ;user_app.c: 284:     InterruptTimerXus((u16)(u16)0,1);
 [e ( _InterruptTimerXus (2 , -> -> 0 `i `us -> -> 1 `i `a ]
-"255
-[; ;user_app.c: 255:     for(int i = 0; i<1000;i++){
+"286
+[; ;user_app.c: 286:     for(int i = 0; i<450;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 1000 `i 2284  ]
+[e $ < _i -> 450 `i 2284  ]
 [e $U 2285  ]
 [e :U 2284 ]
 {
-"256
-[; ;user_app.c: 256:         TimeXus(u16SongNoteDurationArray[u8NoteNumber]);
+"288
+[; ;user_app.c: 288:         TimeXus(u16SongNoteDurationArray[u8NoteNumber]);
 [e ( _TimeXus (1 *U + &U _u16SongNoteDurationArray * -> F15949 `ux -> -> # *U &U _u16SongNoteDurationArray `ui `ux ]
-"257
-[; ;user_app.c: 257:         while( PIR3bits.TMR0IF == 0);
+"290
+[; ;user_app.c: 290:         while( PIR3bits.TMR0IF == 0);
 [e $U 2287  ]
 [e :U 2288 ]
 [e :U 2287 ]
 [e $ == -> . . _PIR3bits 0 7 `i -> 0 `i 2288  ]
 [e :U 2289 ]
-"258
-[; ;user_app.c: 258:     }
+"291
+[; ;user_app.c: 291:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 1000 `i 2284  ]
+[e $ < _i -> 450 `i 2284  ]
 [e :U 2285 ]
 }
-"263
-[; ;user_app.c: 263:     if (u8NoteNumber > 41)
-[e $ ! > -> F15949 `i -> 41 `i 2290  ]
-"264
-[; ;user_app.c: 264:     {
+"293
+[; ;user_app.c: 293:     if (u8NoteNumber > 45)
+[e $ ! > -> F15949 `i -> 45 `i 2290  ]
+"294
+[; ;user_app.c: 294:     {
 {
-"265
-[; ;user_app.c: 265:         u8NoteNumber = 0;
+"295
+[; ;user_app.c: 295:         u8NoteNumber = 0;
 [e = F15949 -> -> 0 `i `uc ]
-"266
-[; ;user_app.c: 266:     }
+"296
+[; ;user_app.c: 296:     }
 }
 [e $U 2291  ]
-"267
-[; ;user_app.c: 267:     else
+"297
+[; ;user_app.c: 297:     else
 [e :U 2290 ]
-"268
-[; ;user_app.c: 268:     {
+"298
+[; ;user_app.c: 298:     {
 {
-"269
-[; ;user_app.c: 269:         u8NoteNumber = u8NoteNumber +1;
+"299
+[; ;user_app.c: 299:         u8NoteNumber = u8NoteNumber +1;
 [e = F15949 -> + -> F15949 `i -> 1 `i `uc ]
-"270
-[; ;user_app.c: 270:     }
+"300
+[; ;user_app.c: 300:     }
 }
 [e :U 2291 ]
-"272
-[; ;user_app.c: 272: }
+"302
+[; ;user_app.c: 302: }
 [e :UE 2277 ]
 }
